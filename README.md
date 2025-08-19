@@ -23,13 +23,13 @@ git fetch: 가져오기만 함 (내 로컬 작업에는 영향 없음).
 git pull: git fetch + git merge (가져온 걸 현재 브랜치에 합침).
 
 예시
-# 원격 저장소(origin)의 모든 브랜치 가져오기
+## 원격 저장소(origin)의 모든 브랜치 가져오기
 git fetch origin
 
-# 특정 브랜치만 가져오기
+## 특정 브랜치만 가져오기
 git fetch origin main
 
-# 원격 브랜치와 비교
+## 원격 브랜치와 비교
 git log HEAD..origin/main
 git diff origin/main
 
@@ -56,13 +56,13 @@ git pull 은 사실상
 현재 내가 checkout 중인 로컬 브랜치에 그 커밋을 합침 (git merge 또는 git rebase)
 
 기본 사용법
-# 원격 저장소(origin)에서 현재 브랜치 이름과 같은 브랜치 가져와서 자동 merge
+## 원격 저장소(origin)에서 현재 브랜치 이름과 같은 브랜치 가져와서 자동 merge
 git pull
 
-# 원격 저장소 origin의 main 브랜치 가져와서 현재 브랜치에 병합
+## 원격 저장소 origin의 main 브랜치 가져와서 현재 브랜치에 병합
 git pull origin main
 
-# 가져온 뒤 merge 말고 rebase로 정리
+## 가져온 뒤 merge 말고 rebase로 정리
 git pull --rebase origin main
 
 차이 예시
@@ -103,22 +103,22 @@ PowerShell은 마이크로소프트에서 만든 셸(shell) & 스크립트 언�
 → 익숙한 UNIX 명령어나 cmd 명령어와 호환되는 별칭 제공 (ls, cat, dir 등).
 
 기본 명령어 예시
-# 현재 디렉토리 보기
+## 현재 디렉토리 보기
 Get-Location     # alias: pwd
 
-# 디렉토리 목록
+## 디렉토리 목록
 Get-ChildItem    # alias: ls, dir
 
-# 파일 내용 출력
+## 파일 내용 출력
 Get-Content file.txt   # alias: cat
 
-# 프로세스 보기
+## 프로세스 보기
 Get-Process     # alias: ps
 
-# 서비스 보기
+## 서비스 보기
 Get-Service
 
-# 변수 사용
+## 변수 사용
 $var = "Hello PowerShell"
 Write-Output $var
 
