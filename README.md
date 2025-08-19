@@ -182,3 +182,27 @@ PR 룰
 SemVer: vMAJOR.MINOR.PATCH
 
 배포 커밋에 태그: git tag -a v1.4.2 -m "2025-08-19 release"; git push --tags
+
+✅ 정리노트: GitHub Collaborators (협력자 설정)
+
+위치: GitHub 저장소 → Settings → Access → Collaborators
+
+역할: 저장소에 외부 사용자 초대
+
+Owner(소유자): 모든 권한
+
+Collaborator: 지정된 저장소에 push, issue, PR 등 권한 부여
+
+권한 부여 과정
+
+저장소 소유자가 Collaborators 메뉴에서 초대
+
+이메일/알림으로 초대 수락
+
+해당 사용자는 해당 저장소에 접근 가능
+
+📌 팀 관리 팁
+
+소규모 프로젝트 → Collaborators로 직접 추가
+
+조직(Organization) 기반 협업 → 팀 단위 권한 관리 추천 (Admin, Maintain, Write, Triage, Read)
