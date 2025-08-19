@@ -124,4 +124,5 @@ Write-Output $var
 
 실행 정책 때문에 스크립트가 막힐 수 있음 → 아래로 허용 가능:
 
+
 Set-ExecutionPolicy RemoteSignedg
