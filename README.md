@@ -128,5 +128,57 @@ Write-Output $var
 
 실행 정책 때문에 스크립트가 막힐 수 있음 → 아래로 허용 가능:
 
+Git 브랜치 전략, 딱 정리
+1) 전략 3종 비교
 
-Set-ExecutionPolicy RemoteSignedg
+Trunk‑Based (추천, 소규모/속도 우선)
+
+기본: main 하나 + 짧은 feature/… 브랜치
+
+원칙: 작은 PR(≤200줄), 1–2일 내 머지, 기능 플래그로 미완성 숨김
+
+장점: 충돌·릴리스 부담 최소, CI/CD 친화
+
+GitHub Flow (웹서비스/상시배포)
+
+main에서 feature/… 따고 → PR → 리뷰 → 머지 → 배포
+
+배포는 main 머지와 거의 동시
+
+Git Flow (릴리스 주기 뚜렷/온프렘)
+
+브랜치: main(배포), develop(통합), feature/…, release/…, hotfix/…
+
+장점: 릴리스 준비·핫픽스 절차 명확 (대신 브랜치 많아짐)
+
+2) 상황별 추천
+
+팀 작고 배포 자주 → Trunk‑Based
+
+웹서비스, 배포 자동화 완료 → GitHub Flow
+
+장기 QA/버전 유지보수 필요(예: 고객사별 릴리스) → Git Flow
+
+3) 공통 규칙(전략과 무관하게)
+
+네이밍
+
+feature/<JIRA-123>-짧은-설명
+
+hotfix/<버그키>
+
+release/<vX.Y.Z>
+
+보호 규칙 (예: GitHub)
+
+main(그리고 develop 사용 시): 직접 푸시 금지, 최소 1–2명 리뷰, 필수 CI 통과, squash merge 권장
+
+PR 룰
+
+작게, 설명/테스트 포함, Draft → Ready for review 흐름
+
+버저닝/태그
+
+SemVer: vMAJOR.MINOR.PATCH
+
+배포 커밋에 태그: git tag -a v1.4.2 -m "2025-08-19 release"; git push --tags
