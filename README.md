@@ -3,6 +3,7 @@
 ##### 브랜치 기능 테스트
 브랜치 기능 테스트 2
 
+develop to test 
 git fetch 는 원격 저장소(remote repository)에서 최신 브랜치, 태그, 커밋 정보를 가져오되, 현재 작업 중인 로컬 브랜치에는 적용하지 않는 명령어입니다.
 
 즉, 원격 저장소의 최신 상태를 확인할 수 있게 해주지만, 내 작업 트리에 직접 반영되지는 않습니다.
@@ -126,6 +127,3 @@ Write-Output $var
 확장자: .ps1
 
 실행 정책 때문에 스크립트가 막힐 수 있음 → 아래로 허용 가능:
-
-
-Set-ExecutionPolicy RemoteSignedg
